@@ -139,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 
-class ToDo
+class ToDo implements Serializable
 {
     Integer id;
     String name;
@@ -164,3 +164,4 @@ class ToDoListAdapter extends ArrayAdapter<ToDo>
 
         return convertView;
     }
+}
