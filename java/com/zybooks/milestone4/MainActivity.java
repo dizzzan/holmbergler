@@ -96,15 +96,16 @@ public class MainActivity extends AppCompatActivity {
 
         // button listener goes here
 
-        Button TaskBtn = (Button) findViewById(R.id.btnShowAllTasks);
-        TaskBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
+        Button allView = (Button) findViewById(R.id.btnShowAllTasks);
+        allView.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, AllTasksActivity.class);
+                Intent intent = new Intent(this, AllTasksActivity.class);
+                intent.putExtra("array", (Serializable) arrayList);
                 startActivity(intent);
-
             }
         });
+        
+        
     }
 
     protected void removeItemFromList(final int position)
